@@ -1,0 +1,227 @@
+@import "./colors";
+
+.bottom-btn {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: 0.5s ease;
+
+  span {
+    display: none;
+    transition: 0.3s ease;
+  }
+}
+
+.side {
+  // background-color: red;
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-light;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    -moz-border-radius: rem(4px);
+    -webkit-border-radius: rem(4px);
+    border-radius: rem(4px);
+  }
+}
+
+.sider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100px;
+  padding: 0px 16px;
+  overflow: hidden;
+  margin-right: 30px;
+
+  min-height: 100vh;
+  /* background-color: rgb(5, 17, 247) ; */
+
+  transition: 0.4s ease-out;
+
+  .top {
+    display: flex;
+    flex-direction: column;
+    .logo {
+      margin-bottom: 16px;
+
+      .img {
+        width: 90px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .menu-toggle-wrap {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 16px;
+
+      position: relative;
+      /* top: 0; */
+      transition: 0.2s ease;
+
+      .menu-toggle {
+        transition: 0.2s ease-out;
+
+        .icons {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-bottom: 80px;
+
+      .button {
+        /* display: flex; */
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        border-radius: 8px;
+        padding: 10px 20px;
+        margin: 0 -16px;
+        /* margin: 10px; */
+        /* width: max-content; */
+        .icon-cover {
+          padding: 8px -56px;
+        }
+        span {
+          transition: 0.3s ease;
+          text-align: center;
+        }
+        &:hover,
+        router-link-exact-active {
+          /* background-color: rgb(232, 252, 180); */
+          background-color: $primary-light-active;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 760px) {
+    position: fixed;
+    z-index: 99;
+  }
+  .router-link-exact-active {
+    background-color: rgb(232, 252, 180);
+  }
+}
+
+.menu {
+  span {
+    display: none;
+    text-transform: capitalize;
+  }
+}
+
+.bottom {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 20px 18px;
+  transition: 1s ease;
+
+  // &:hover,
+  // router-link-exact-active {
+  //     background-color: rgb(232, 252, 180);
+  // }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    // align-items: center;
+
+    .active {
+      background-color: rgb(232, 252, 180);
+    }
+
+    span {
+      text-align: center;
+    }
+  }
+}
+
+//   .bottom {
+//     position: fixed;
+//     bottom: 0;
+//     // background-color: red;
+
+//   .button {
+//     /* display: flex; */
+//     text-decoration: none;
+//     color: black;
+//     font-weight: 500;
+//     border-radius: 8px;
+//     padding: 10px 20px;
+//     margin: 0 -26px;
+//     .icon-cover {
+//       padding: 8px -56px;
+//     }
+//     span {
+//       transition: 0.3s ease;
+//       text-align: center;
+//     }
+//     .active {
+//       background-color: rgb(232, 252, 180);
+//     }
+//     &:hover,
+//     router-link-exact-active {
+//       background-color: rgb(232, 252, 180);
+//     }
+//   }
+// }
+
+.is-expanded {
+  width: 200px;
+
+  .menu {
+    gap: 10px;
+    width: fit-content;
+    span {
+      display: block;
+    }
+    .button {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      span {
+        opacity: 1;
+        display: block;
+        transition: 0.3s ease;
+        text-align: left;
+      }
+      &:hover,
+      router-link-exact-active {
+        background-color: rgb(232, 252, 180);
+      }
+    }
+  }
+}
+
+.is-expanded-bottom {
+  width: 160px;
+  transition: 1s ease;
+
+  .bottom-btn {
+    span {
+      display: block;
+      transition: 0.3s ease;
+    }
+  }
+}

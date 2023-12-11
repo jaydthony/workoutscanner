@@ -1,0 +1,77 @@
+@import "../scss/colors";
+
+.overview{
+    min-height: 90vh;
+    background-color: $primary-light;
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: hsl(0, 0%, 40%);
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-border-radius: rem(4px);
+        -webkit-border-radius: rem(4px);
+        border-radius: rem(4px);
+      }
+}
+
+.top{
+    padding: 10px;
+    
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+      }
+      &::-webkit-scrollbar {
+        width: 5px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: hsl(0, 0%, 40%);
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        -moz-border-radius: rem(4px);
+        -webkit-border-radius: rem(4px);
+        border-radius: rem(4px);
+      }
+}
+
+.cards{
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.724); 
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    padding: 20px;
+    // width: fit-content;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+
+    p{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+  
+    h2{
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+
+    .right{
+        color: $primary-normal;
+    }
+}
+
+.day-group{
+    h2{
+        color: $primary-normal;
+    }
+}

@@ -1,0 +1,70 @@
+@import "./colors";
+
+.new-branch{
+    padding: 20px;
+    max-width: 100%;
+
+    h2{
+        // font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    .form{
+        .forms{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            margin-bottom: 12px;
+            // align-items: end;
+
+            input, textarea{
+                border: 1px solid $neutral-normal;
+                margin-bottom: 30px;
+                outline: none;
+                border-radius: 4px;
+                padding: 10px 15px;
+                min-width: 520px;
+
+                @media (max-width: 600px) {
+                    min-width: 0px !important;
+                    width: 75vw;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            label{
+                position: absolute;
+                transform: translateX(5px) translateY(-5px);
+
+                background-color: $primary-dark;
+                color: $primary-light;
+                width: fit-content;
+                padding: 1px 2px;
+                border-radius: 3px;
+                font-size: 10px;
+            }
+        }
+        .form-botton{
+            display: flex;
+            justify-content: end;
+            gap: 15px;
+            // justify-content: space-evenly;
+
+            button{
+                border: 1px solid $neutral-dark;
+                padding: 10px 15px;
+                border-radius: 4px;
+                font-size: 13px;
+                transition: 0.3s ease;
+
+                &:hover{
+                    background-color: $primary-normal;
+                    border: 1px solid $primary-normal;
+                }
+            }
+        }
+    }
+}

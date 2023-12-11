@@ -1,0 +1,399 @@
+@import "./colors";
+
+:root {
+  --color-black: #41423d;
+  --color-neutral-100: #f5f4f0;
+  --color-neutral: #dfddd0;
+  --color-primary-100: #f0f7f5;
+  --color-primary-200: #e0eeeb;
+  --color-primary-300: #cfe5e0;
+  --color-primary: #3f9783;
+  --color-primary-500: #327969;
+  --color-white: #fbfcfa;
+  --text-font-family: "Inter", sans-serif;
+  --title-font-family: "Lora", serif;
+  --title-font-weight: 500;
+}
+
+// * {
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
+// html {
+//   font: normal 16px/1.5 sans-serif;
+// }
+
+// body {
+//   background: $color-neutral-100;
+//   color: $color-black;
+//   font-family: $text-font-family;
+// }
+
+h1 {
+  color: $color-primary;
+  font-family: $title-font-family;
+  font-size: 2.5rem;
+  font-weight: $title-font-weight;
+  margin: 0;
+}
+
+a {
+  color: $color-primary;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+a:hover {
+  color: $color-primary-500;
+}
+
+/*
+  main
+*/
+.topnameedit {
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  &:hover {
+    border: none;
+  }
+}
+
+main {
+  align-items: center;
+  display: grid;
+  //   min-height: 100vh;
+  //   padding: 2.5rem;
+  width: 100%;
+}
+
+main .content {
+  margin: 0 auto;
+  max-width: 1400px;
+  width: 100%;
+  height: -webkit-fill-available;
+}
+
+main .content h1 {
+  font-family: sans-serif !important;
+  color: $neutral-dark;
+}
+
+.main-header {
+  margin: 0 0 2.5rem;
+}
+.main-header.grid {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+/*
+  buttons
+*/
+
+.button {
+  background: $primary-dark;
+  border: 0;
+  border-radius: 0.25rem;
+  color: $color-white;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 500;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 2rem;
+
+  /* grid */
+  align-items: center;
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+}
+.button:hover {
+  background: $primary-dark-hover;
+}
+.button i {
+  font-size: 1.25rem;
+}
+
+.button.icon {
+  border-radius: 50%;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  width: 3rem;
+}
+
+.button.link {
+  background: none;
+  color: $color-primary;
+  justify-content: start;
+  padding: 0;
+}
+.button.link:hover {
+  color: $color-primary-500;
+}
+.button.link i {
+  font-size: inherit;
+}
+
+/*
+  cards
+*/
+
+.card {
+  border: 1px solid $color-neutral;
+  border-radius: 0.25rem;
+  background: $color-white;
+  margin: 0 0 2.5rem;
+  overflow: auto;
+  padding: 1.5rem 1.5rem 2.5rem;
+  width: 100%;
+}
+
+/*
+  inputs
+*/
+
+.checkbox {
+  background: $color-white;
+  border: 1px solid $color-neutral;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  height: 1.5rem;
+  position: relative;
+  width: 1.5rem;
+}
+
+.checkbox input[type="checkbox"] {
+  cursor: pointer;
+  height: 0;
+  opacity: 0;
+  position: relative;
+  width: 0;
+}
+
+.checkbox .checkmark::after {
+  background: $color-primary;
+  border: 0;
+  border-radius: 0.25rem;
+  color: $color-white;
+  content: "\f00c";
+  display: block;
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.75rem;
+  font-weight: 900;
+  height: 1.5rem;
+  width: 1.5rem;
+
+  /* grid */
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  /* position */
+  position: absolute;
+  left: -1px;
+  top: -1px;
+}
+.checkbox .checkmark.minus::after {
+  content: "\f068";
+}
+.checkbox .checkmark {
+  display: none;
+}
+.checkbox input[type="checkbox"]:checked ~ .checkmark {
+  display: block;
+}
+
+input[type="number"],
+input[type="text"] {
+  background: $color-white;
+  border: 1px solid $color-neutral;
+  border-radius: 0.25rem;
+  color: $color-black;
+  display: inline-block;
+  font: inherit;
+  height: 3rem;
+  margin: 0 0.5rem;
+  padding: 0 1rem;
+  width: 5rem;
+}
+
+/*
+  colors
+*/
+
+.colors {
+  display: grid;
+  justify-content: start;
+  gap: 1.5rem;
+  grid-auto-flow: column;
+  margin: 2.5rem 0;
+}
+
+.color {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+.color.black {
+  background: $color-black;
+}
+.color.neutral-100 {
+  background: $color-neutral-100;
+  border: 1px solid $color-neutral;
+}
+.color.neutral {
+  background: $color-neutral;
+}
+.color.primary-100 {
+  background: $color-primary-100;
+  border: 1px solid $color-primary-300;
+}
+.color.primary-200 {
+  background: $color-primary-200;
+  border: 1px solid $color-primary-300;
+}
+.color.primary-300 {
+  background: $color-primary-300;
+}
+.color.primary {
+  background: $color-primary;
+}
+.color.primary-500 {
+  background: $color-primary-500;
+}
+.color.white {
+  background: $color-white;
+  border: 1px solid $color-neutral;
+}
+
+/*
+  paging
+*/
+
+.paging.grid {
+  align-items: center;
+  display: grid;
+  gap: 0.75rem;
+  grid-auto-flow: column;
+}
+
+.paging span {
+  margin: 0 0.75rem;
+}
+
+/*
+  table
+*/
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border-bottom: 1px solid $color-primary-300;
+  font-size: 1rem;
+  text-align: left;
+  white-space: nowrap;
+}
+th {
+  padding: 1.5rem 1rem;
+}
+td {
+  padding: 1rem;
+}
+
+tbody tr {
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+tbody tr.selected td {
+  background: $primary-dark;
+  color: white;
+}
+tbody tr:hover:not(.selected) td,
+tbody tr.hover:not(.selected) td {
+  background: $primary-dark-active;
+}
+
+.table-footer,
+.table-header {
+  font-size: 0.875rem;
+}
+.table-footer {
+  margin: -1.5rem 0 0;
+}
+.table-header {
+  margin: 0 0 1rem;
+}
+
+.table-footer.grid,
+.table-header.grid {
+  align-items: center;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
+
+select {
+  appearance: none;
+  // border: 0;
+  outline: 0;
+  background: none;
+  color: inherit;
+  box-shadow: none;
+  background: $primary-dark-active;
+}
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select wrapper */
+.select {
+  position: relative;
+  display: flex;
+  width: 200px;
+
+  border-radius: 0.25rem;
+  overflow: hidden;
+  &:disabled {
+    background: $primary-light !important;
+  }
+  // Select style
+  option {
+    width: 200px;
+  }
+  select {
+    flex: 1;
+    padding: 1em;
+    cursor: pointer;
+  }
+  // Arrow style
+  &::after {
+    content: "\25BC";
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: 0.25s all ease;
+    pointer-events: none; // IMPORTANT to click on arrow
+  }
+  // Arrow hover
+  &:hover::after {
+    color: #f39c12;
+    animation: bounce 0.5s infinite;
+  }
+}
+@keyframes bounce {
+  25% {
+    transform: translatey(5px);
+  }
+  75% {
+    transform: translatey(-5px);
+  }
+}

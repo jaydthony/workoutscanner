@@ -1,0 +1,140 @@
+@import "../colors";
+
+// top let arrow
+.leftarr {
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  z-index: 1;
+  top: 7px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 200000;
+}
+
+.detail {
+  position: absolute;
+  transform: translateY(-55px) translateX(10px);
+  color: white;
+  font-size: 18px;
+  font-weight: 900;
+
+  span {
+    font-size: 12px !important;
+    font-weight: 200;
+  }
+}
+.slide-image {
+  border-radius: 20px;
+  width: 250px;
+  height: 150px;
+
+  &:hover {
+    // border: 7px solid $primary-normal;
+  }
+}
+
+.v-card {
+  background-color: transparent !important;
+  border-radius: 20px !important;
+  position: relative;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+}
+
+.v-sheet {
+  background-color: transparent !important;
+}
+
+/* .v-icon{
+    display: none;
+} */
+.v-slide-group__next,
+.v-slide-group__prev {
+  min-width: 0px;
+}
+.trainer {
+  height: 100vh;
+  color: white;
+}
+.top {
+  //   background-image: url("../../assets/TrainerBackground.png");
+  height: 35%;
+  background-size: cover;
+  background-position: center;
+}
+
+.info {
+  padding: 20px;
+  background-color: #1c1c1e;
+  height: 65%;
+  /* position: absolute; */
+  transform: translateY(-30px);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  overflow-y: auto;
+
+  .info-top {
+    h3 {
+      font-size: 25px;
+      font-weight: 500;
+    }
+  }
+
+  .info-table {
+    /* display: grid; */
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #171914;
+    padding: 10px;
+    border-radius: 10px;
+
+    .tab {
+      text-align: center;
+
+      h3 {
+        font-size: 23px;
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.progress-info {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0px auto;
+  // border: 7px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.progress-circle {
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+
+  .progress-det {
+    text-align: center;
+  }
+  h3 {
+    text-align: center;
+    color: white;
+    font-size: 23px;
+  }
+}
+
+.selectedClass {
+  border: 7px solid $primary-normal;
+}

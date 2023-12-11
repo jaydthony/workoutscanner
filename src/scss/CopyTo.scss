@@ -1,0 +1,15 @@
+@import './colors';
+.v-btn{
+    background-color: $primary-normal;
+
+    &:last-child{
+        text-align: start;
+        width: 100%;
+    }
+
+}
+
+.to-workout{
+    background-color: transparent !important;
+}
+

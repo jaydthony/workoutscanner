@@ -1,0 +1,75 @@
+@import "./colors";
+
+.registration{
+    background-color: $primary-light;
+    min-height: 90vh;
+}
+
+.card{
+    position: relative;
+  background-color: rgba(136, 180, 14, 0.285);
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid $primary-normal-active;
+    p{
+        // display: -webkit-box;
+        // -webkit-box-orient: vertical;
+        // -webkit-line-clamp: 1;
+        // overflow: hidden;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    h3{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+        overflow: hidden;
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    .email{
+        font-size: 15px !important;
+        font-weight: 500;
+    }
+
+    .time{
+        font-size: 13px !important;
+        font-weight: 500;
+    }
+}
+
+.bot{
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+
+    button{
+        padding: 5px 7px;
+        font-size: 14px;
+        border-radius: 5px;
+    }
+
+    button:first-child{
+        color: $neutral-dark-active;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: .3s ease;
+        // background-color: $accent-normal;
+        &:hover{
+            background-color: $accent-normal;
+        }
+    }
+
+    button:last-child{
+        color: $neutral-dark-active;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: .3s ease;
+
+        &:hover{
+            background-color: $primary-normal;
+        }
+    }
+}

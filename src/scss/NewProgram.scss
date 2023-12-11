@@ -1,0 +1,101 @@
+@import "../scss/colors";
+
+.cover {
+  display: grid;
+  grid-template-columns: 4fr 0fr 2fr;
+  gap: 10px;
+}
+
+.v-sheet {
+  background-color: $primary-dark-active;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.imgs {
+  width: 80px;
+  border-radius: 6px;
+}
+
+.det {
+  h4 {
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+.btn-secondary {
+  background-color: $primary-dark-hover;
+  color: $primary-light;
+}
+
+.middle {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.adjust-margin {
+  margin-bottom: 10px !important;
+}
+
+.right {
+  //   max-height: 500px;
+  overflow: scroll;
+  height: 100%;
+  overflow-x: hidden;
+
+  @media (max-width: 600px) {
+    max-height: 100%;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar {
+    width: 5px;
+    margin-left: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $primary-dark;
+  }
+}
+
+.v-col {
+  margin-bottom: 100px;
+}
+
+.buttons {
+  display: flex;
+  // align-items: center;
+  // justify-content: end;
+  // gap: 10px;
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+
+  button {
+    // border: 1px solid rgb(54, 54, 54);
+    // padding: 6px;
+    // border-radius: 8px;
+    // transition: 0.3s ease;
+    // font-size: 15px;
+    &:hover {
+      background-color: $primary-normal;
+      border: 1px solid $primary-normal;
+    }
+  }
+}
+
+.v-btn__content {
+  color: black;
+}

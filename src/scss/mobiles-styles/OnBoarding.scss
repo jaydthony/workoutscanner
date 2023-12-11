@@ -1,0 +1,121 @@
+@import "../colors";
+
+.testing {
+  height: 100vh;
+}
+
+.v-carousel {
+  position: relative;
+}
+
+.testing-top {
+  // background-image: url('../../assets/Background1.png');
+  background-image: url("../../assets/man-lift (3).jpg");
+  height: 100%;
+  width: 100%;
+  // background-size: contain;
+  background-size: cover;
+}
+
+.testing-top2 {
+  // background-image: url('../../assets/Background2.png');
+  background-image: url("../../assets/man-lift (2).jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.testing-top3 {
+  // background-image: url('../../assets/Background3.png');
+  background-image: url("../../assets/squatting.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+@media (min-width: 600px) {
+  .testing-top,
+  .testing-top2,
+  .testing-top3 {
+    background-size: cover;
+  }
+
+  .logo {
+    width: 300px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .testing-top,
+  .testing-top2,
+  .testing-top3 {
+    background-size: cover;
+    background-position: center;
+  }
+
+  // .testing-top2{
+  //     background-size: cover;
+  //     background-position: 0% 15%;
+  // }
+}
+
+h3 {
+  font-size: 30px;
+  color: white;
+  font-weight: 900;
+}
+
+.h3 {
+  font-size: 30px;
+  color: $primary-dark;
+  font-weight: 900;
+}
+
+h6 {
+  font-size: 14px;
+}
+
+button {
+  background-color: $primary-normal;
+  padding: 10px 20px;
+  color: black;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+}
+
+.onboard-detail {
+  text-align: right;
+  color: #e8fcb4;
+  position: absolute;
+  top: 25%;
+  /* right: 30%; */
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.intro-det {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.redirect {
+  text-align: center;
+  color: $primary-light-active;
+  position: absolute;
+  bottom: 10%;
+  right: 0;
+  left: 0;
+}
+
+a {
+  color: $primary-normal;
+  text-decoration: none;
+}

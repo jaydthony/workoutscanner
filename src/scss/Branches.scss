@@ -1,0 +1,242 @@
+@import "./colors";
+
+.contain{ 
+    .branch-top{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+
+        .input-cover{
+            border: 1px solid $secondary-darker;
+            padding: 5px 10px;
+            border-radius: 4px;
+
+            input{
+                outline: none;
+                
+                @media (max-width: 1400px) {
+                    max-width: 100px;
+                    font-size: 14px;
+                }
+            }
+        }   
+    }
+
+}
+
+.card{
+    border: 1px solid black;
+
+    .top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h1{
+          color: white;
+        }
+    }
+
+    .middle{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        .pic-cover{
+            // background-color: $primary-light-active;
+            background-color: $secondary-light-active;
+            padding: 10px;
+            border-radius: 50%;
+        }
+    }
+
+    .icons{
+        margin-top: 10px;
+        display: flex;
+        align-items: right;
+        justify-content: right;
+        gap: 8px;
+
+        svg{
+            cursor: pointer;
+        }
+    }
+}
+
+.qrcode-btn{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    .input-cover {
+      border: 1px solid $secondary-darker;
+      padding: 5px 10px;
+      border-radius: 4px;
+
+      input {
+        outline: none;
+
+        @media (max-width: 1400px) {
+          max-width: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .table {
+    width: 100%;
+    thead {
+      background-color: $primary-darker;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      tr {
+        background-color: $primary-darker;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        th {
+          padding: 12px 10px;
+          // // text-align: left;
+          // background-color: $primary-darker;
+          color: white;
+
+          @media (max-width: 700px) {
+            // display: none;
+          }
+        }
+      }
+    }
+    tbody {
+      tr {
+        border-bottom: 1px solid black;
+        td {
+          color: $primary-darker;
+          padding: 5px 10px;
+
+          @media (max-width: 700px) {
+            // display: block;
+          }
+
+          .cover-icons {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+
+    @media (max-width: 900px) {
+      thead {
+        display: none;
+      }
+
+      tbody {
+        tr {
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid black;
+
+          &:last-child {
+            border-bottom: 0px;
+          }
+
+          td {
+            border-bottom: 1px solid black;
+            padding: 10px 15px;
+            // display: flex;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            align-items: center;
+            gap: 30px;
+
+            &:last-child {
+              border-bottom: 0px;
+            }
+
+            &::before {
+              font-weight: 700;
+              text-transform: capitalize;
+            }
+
+            &:nth-of-type(1)::before {
+              content: "Branch Name:";
+            }
+            &:nth-of-type(2)::before {
+              content: "Manager:";
+            }
+            &:nth-of-type(3)::before {
+              content: "Location:";
+            }
+            &:nth-of-type(4)::before {
+              content: "Status:";
+            }
+            &:nth-of-type(5)::before {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+.qrcode-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 10px;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 15px;
+    width: 50%;
+ 
+    &:last-child {
+      color: white;
+      background-color: $primary-darker;
+      border-radius: 8px;
+    }
+  }
+}
+
+.delete-btn{
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+
+  button{
+    color: $secondary-darker;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: .3s ease;
+    &:first-child{
+      background-color: $primary-normal;
+
+      &:hover{
+        background-color: $primary-normal-active;
+      }
+    }
+    &:last-child{
+      background-color: $accent-normal;
+
+      &:hover{
+        background-color:  $accent-normal-hover;
+      }
+    }
+  }
+}

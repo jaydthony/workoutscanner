@@ -1,0 +1,298 @@
+@import "./colors";
+
+.dialog {
+  padding: 30px;
+
+  h1 {
+    font-size: 33px;
+  }
+
+  .tabs {
+    .tab-cover,
+    .tab-cover2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: normal;
+      gap: 20px;
+
+      @media (max-width: 1000px) {
+        flex-direction: column;
+      }
+
+      .left {
+        img {
+          @media (max-width: 800px) {
+            width: 100%;
+          }
+        }
+      }
+
+      .right {
+        .forms {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          // align-items: end;
+
+          input,
+          textarea {
+            border: 1px solid $neutral-normal;
+            margin-bottom: 10px;
+            outline: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            padding-top: 20px;
+
+            &:focus {
+              outline: none;
+            }
+          }
+
+          label {
+            position: absolute;
+            transform: translateX(5px) translateY(-5px);
+
+            background-color: $primary-dark;
+            color: $primary-light;
+            width: fit-content;
+            padding: 1px 2px;
+            border-radius: 3px;
+            font-size: 15px;
+          }
+        }
+
+        .form-botton {
+          display: flex;
+          justify-content: end;
+          gap: 15px;
+          // justify-content: space-evenly;
+
+          button {
+            border: 1px solid $neutral-dark;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 13px;
+            transition: 0.3s ease;
+
+            &:hover {
+              background-color: $primary-normal;
+              border: 1px solid $primary-normal;
+            }
+          }
+        }
+      }
+    }
+
+    .tab-cover2 {
+      .left {
+        img {
+          max-width: 520px;
+        }
+        .input-cover {
+          display: flex;
+          align-items: baseline;
+          gap: 20px;
+          margin-top: 10px;
+
+          @media (max-width: 900px) {
+            flex-direction: column;
+            gap: 10px;
+          }
+
+          .forms {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 100%;
+
+            // align-items: end;
+
+            input {
+              border: 1px solid $neutral-normal;
+              margin-bottom: 12px;
+              outline: none;
+              border-radius: 4px;
+              padding: 10px 15px;
+
+              &:focus {
+                outline: none;
+              }
+            }
+
+            label {
+              position: absolute;
+              transform: translateX(5px) translateY(-5px);
+
+              background-color: $primary-dark;
+              color: $primary-light;
+              width: fit-content;
+              padding: 1px 2px;
+              border-radius: 3px;
+              font-size: 10px;
+            }
+          }
+
+          button {
+            border: 1px solid $neutral-dark;
+            padding: 10px 15px;
+            min-height: fit-content;
+            border-radius: 4px;
+            font-size: 13px;
+            transition: 0.3s ease;
+
+            &:hover {
+              background-color: $primary-normal;
+              border: 1px solid $primary-normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dialog2 {
+  padding: 30px;
+  max-width: 50%;
+  margin: 0px auto;
+
+  @media (max-width: 1000px) {
+    max-width: 80%;
+  }
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
+
+  // img{
+  //     max-width: 520px;
+  // }
+
+  .dialog2-det-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    h1 {
+      font-size: 31px;
+      color: $secondary-darker;
+    }
+  }
+
+  .dialog2-det-bot {
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+.dialog3 {
+  padding: 30px;
+  margin: 0px auto;
+  max-width: 50%;
+
+  @media (max-width: 600px) {
+    max-width: 100%;
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+
+  .dialog3-det {
+    .forms {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+
+      // align-items: end;
+
+      input,
+      textarea {
+        border: 1px solid $neutral-normal;
+        margin-bottom: 12px;
+        outline: none;
+        border-radius: 4px;
+        padding: 10px 15px;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      label {
+        position: absolute;
+        transform: translateX(5px) translateY(-5px);
+
+        background-color: $primary-dark;
+        color: $primary-light;
+        width: fit-content;
+        padding: 1px 2px;
+        border-radius: 3px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  .dialog3-bot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .left {
+      button {
+        border: 1px solid $primary-dark;
+        padding: 10px 20px;
+        border-radius: 6px;
+        color: $primary-darker;
+        transition: 0.3s ease;
+        font-size: 13px;
+
+        &:hover {
+          background-color: $primary-dark;
+          color: $primary-light;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      gap: 10px;
+
+      button {
+        border: 1px solid $primary-dark;
+        padding: 10px 20px;
+        border-radius: 6px;
+        color: $primary-darker;
+        transition: 0.3s ease;
+        font-size: 13px;
+
+        &:hover {
+          background-color: $primary-dark;
+          color: $primary-light;
+        }
+      }
+    }
+  }
+}
+
+.dialog4 {
+  // max-width: 50%;
+  margin: 0px auto;
+  padding: 10px 15px;
+
+  h2 {
+    font-size: 33px;
+  }
+
+  p {
+    // width: 50%;
+    font-size: 13px;
+  }
+
+  .dialog4-btn {
+    display: flex;
+    align-items: end;
+  }
+}

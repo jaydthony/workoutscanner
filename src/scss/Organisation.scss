@@ -1,0 +1,167 @@
+@import "./colors";
+
+.organisation{
+    background-color: $primary-light;
+    min-height: 90vh;
+}
+
+.organisation-cover{
+    padding: 10px;
+}
+
+.organisation-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new{
+    button{
+        background-color: $primary-normal;
+        box-shadow: none;
+    }
+}
+ 
+.search{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 4px;
+
+
+    .search-input{
+        outline: none;
+    }
+}
+
+.organisation-table{
+    .v-table{
+        width: 100%;
+        border-radius: 4px;
+        border: 1px solid black;
+    }
+
+    thead{
+        background-color: $primary-light-active;
+
+        @media (max-width: 700px) {
+            display: none;
+        }
+    }
+}
+
+td{
+    
+    @media (max-width: 700px) {
+        display: flex;
+        align-items: center;
+
+        .v-chip{
+            margin-left: 0px !important;
+        }
+        &::before{
+            content: attr(data-cell)  ": ";
+            margin-right: 10px;
+        }
+    }
+}
+
+
+.actions{
+    width: fit-content;
+    div{
+        display: inline-block;
+        margin-right: 10px;
+    }
+} 
+
+.delete{
+    p{
+        color: $accent-normal;      
+    }
+}
+
+.edit-form{
+    padding: 20px;
+    .form{
+        .forms{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            // margin-bottom: 12px;
+            // align-items: end;
+
+            input, textarea{
+                border: 1px solid $neutral-normal;
+                // margin-bottom: 30px;
+                outline: none;
+                border-radius: 4px;
+                padding: 10px 15px;
+                min-width: 520px;
+
+                @media (max-width: 600px) {
+                    min-width: 0px !important;
+                    width: 75vw;
+                }
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            label{
+                position: absolute;
+                transform: translateX(5px) translateY(-5px);
+
+                background-color: $primary-dark;
+                color: $primary-light;
+                width: fit-content;
+                padding: 1px 2px;
+                border-radius: 3px;
+                font-size: 10px;
+            }
+        }
+        .form-botton{
+            display: flex;
+            justify-content: end;
+            gap: 15px;
+            // justify-content: space-evenly;
+
+            button{
+                border: 1px solid $neutral-dark;
+                padding: 10px 15px;
+                border-radius: 4px;
+                font-size: 13px;
+                transition: 0.3s ease;
+
+                &:hover{
+                    background-color: $primary-normal;
+                    border: 1px solid $primary-normal;
+                }
+            }
+        }
+    }
+}
+
+.delete-modal{
+    padding: 10px;
+}
+
+.delete-btn{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 15px;
+    margin-top: 10px;
+
+    .v-btn{
+        &:hover{
+            background-color: $primary-normal;
+        }
+        &:last-child{
+            &:hover{
+                background-color: $accent-normal;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,73 @@
+input[type="date"]{
+    background-color: $primary-light-active;
+    padding: 10px;
+    color: #242424;
+    font-size: 16px;
+    outline: none;
+    border-radius: 5px;
+}
+
+::-webkit-calendar-picker-indicator{
+    cursor: pointer;
+    background-color: #ffff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.start{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: $primary-light;
+    padding: 10px;
+    border: 1px solid $primary-light-active;
+}
+
+.number{
+    outline: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+}
+
+.name{
+    margin: 20px 0px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+.text{
+    display: flex;
+    margin: 20px 0px;
+    align-items: center;
+}
+
+.close{
+    padding: 20px;
+
+    svg{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        cursor: pointer;
+    }
+}
+
+.save-btn{
+    display: flex;
+    justify-content: left;
+}
+
+.save{
+    background-color: $primary-normal;
+
+    button{
+        color: white;
+        font-weight: 700;
+        box-shadow: none;
+    }
+}

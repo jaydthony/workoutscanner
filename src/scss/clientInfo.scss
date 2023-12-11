@@ -1,0 +1,114 @@
+.clientInfo {
+  width: 100%;
+}
+
+.cover {
+  padding: 10px 30px;
+}
+
+p {
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td {
+  border-top: 1px solid rgba(0, 0, 0, 0.328);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.328);
+}
+
+th {
+  text-align: left;
+  padding: 10px 0px;
+}
+
+tbody tr {
+  &:hover {
+    background-color: $primary-light-active;
+  }
+}
+
+.name-cover {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.qrcode {
+  cursor: pointer;
+}
+.qrcode-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  .input-cover {
+    border: 1px solid $secondary-darker;
+    padding: 5px 10px;
+    border-radius: 4px;
+
+    input {
+      outline: none;
+
+      @media (max-width: 1400px) {
+        max-width: 100px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.qrmodal {
+  .qrcode-btn {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    .input-cover {
+      border: 1px solid $secondary-darker;
+      padding: 5px 10px;
+      border-radius: 4px;
+
+      input {
+        outline: none;
+
+        @media (max-width: 1400px) {
+          max-width: 100px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.delete-btn {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+
+  button {
+    color: $secondary-darker;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s ease;
+    &:first-child {
+      background-color: $primary-normal;
+
+      &:hover {
+        background-color: $primary-normal-active;
+      }
+    }
+    &:last-child {
+      background-color: $accent-normal;
+
+      &:hover {
+        background-color: $accent-normal-hover;
+      }
+    }
+  }
+}

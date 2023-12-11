@@ -1,0 +1,72 @@
+@import "./colors";
+
+.cards{
+    display: flex;
+    border: 1px solid rgba(255, 255, 255, 0.724);
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    padding: 20px;
+    // width: fit-content;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+
+    p{
+        font-size: 10px;
+        margin-bottom: 10px;
+    }
+  
+    h2{
+        font-size: 35px;
+        font-weight: 500;
+    }
+
+
+    .right{
+        color: $primary-normal;
+    }
+}
+
+.day-group{
+    h2{
+        color: $primary-normal;
+    }
+}
+
+.table{
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.875);
+    padding: 10px;
+    border-radius: 4px;
+    color: $neutral-dark;
+    border-collapse: collapse;
+}
+
+
+thead tr th{
+    text-align: left;
+    // border: 1px solid rgba(255, 255, 255, 0.327);
+    padding: 10px;
+    font-size: 19px;
+}
+
+tbody tr td{
+    padding: 10px;
+    text-transform: capitalize;
+    font-size: 18px;
+    // border: 1px solid rgba(255, 255, 255, 0.327);
+    margin: 5px 0px;
+}
+
+tbody tr:nth-child(even){
+    background-color: rgba(242, 243, 239, 0.875);
+}
+
+tbody tr td span{
+    background-color: $secondary-dark;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: $primary-light;
+    font-size: 15px;
+}

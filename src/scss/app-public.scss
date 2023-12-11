@@ -1,0 +1,55 @@
+@import './colors';
+
+.v-row.bg-form {
+  border-radius: 8px;
+  background: $primary-light;
+}
+
+.left-side {
+  position: relative;
+  min-height: 750px;
+  border-radius: 8px 0 0 8px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.right-side {
+  display: flex;
+  justify-content: center;
+  .public-form {
+    width: 500px;
+    align-self: center;
+    // .v-input--horizontal {
+    //   border-radius: 5px;
+    // }
+
+    // .v-text-field .v-field {
+    //   border-radius: 5px;
+    // }
+  }
+  .v-field__field {
+    background: #ffffff !important;
+    border: 1px solid #e0e0e0;
+    // border-radius: 5px;
+  }
+  .disclaimer-text {
+    font-size: 14px;
+  }
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
+/* .right-side {
+} */
+
+hr {
+  border: 1px solid #e0e0e0;
+}

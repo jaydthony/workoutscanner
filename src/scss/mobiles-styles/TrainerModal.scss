@@ -1,0 +1,81 @@
+@import '../colors';
+
+.toolbar-top{
+    background-color: $primary-normal;
+    position: sticky;
+    top: 0;
+}
+
+.name{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border-bottom: 1px solid $neutral-light;
+    padding-bottom: 10px;
+    text-transform: capitalize;
+}
+
+
+.duration, .description{
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px solid $neutral-light;
+}
+
+.image-list{
+    width: 120px;
+    border-radius: 8px;
+}
+
+.exercise-cover{
+    // border-top: 1px solid $neutral-light;
+    // border-bottom: 1px solid $neutral-light;
+    padding: 10px;
+    border-left: 6px solid $primary-normal;
+}
+
+.video-detail-cover{
+    border-bottom: 1px solid $neutral-light;
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .info-name{
+        font-weight: 600;
+        font-size: 19px;
+    }
+}
+
+.bottom-circle{
+    padding: 20px;
+    position: fixed;
+    bottom: 5%;
+    right: 0;
+    h3{
+        width: fit-content;
+        background-color: $primary-normal;
+        padding: 15px 30px;
+        border-radius: 35px;
+    }
+}
+
+.video-name{
+    h2, h3{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 1px solid $neutral-light; 
+    }
+}
+
+.instruct > div{
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border-bottom: 1px solid $neutral-light; 
+
+    h4{
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+    }
+}
